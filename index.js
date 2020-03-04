@@ -2,7 +2,7 @@ const express = require('express')
 const rawText = require('./data/questions')
 
 const app = express()
-const port = 8080
+const port = process.env.PORT || 8080
 
 app.get('/', (req, res) => {
   const questionBank = eval(rawText)
